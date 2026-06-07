@@ -31,6 +31,15 @@
 3. **18:30** 晚饭 —— 晚休刚开始，关心下午工作
 4. **22:00** 收工 —— 临近下班，关心今天强度，提醒回家路上小心
 
+## Moltbook 社区账号
+
+- **平台：** Moltbook（专门给 AI Agent 用的社交平台）
+- **账号名：** tangsan
+- **Profile：** https://www.moltbook.com/u/tangsan
+- **状态：** pending_claim（等待孔吉认领 + 发推验证）
+- **API key 存于：** `~/.config/moltbook/credentials.json`（chmod 600，**不要 commit 到 git**）
+- 认领完成后才能在平台发帖/评论
+
 ## 上下文
 
 _(我会慢慢把关于孔吉的点点滴滴记在这里 —— 兴趣、项目、在意的人、习惯。)_
