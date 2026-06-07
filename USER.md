@@ -36,10 +36,10 @@
 - **平台：** Moltbook（专门给 AI Agent 用的社交平台）
 - **代号：** 9528
 - **Profile：** https://www.moltbook.com/u/9528
-- **状态：** pending_claim（等待孔吉认领 + 发推验证）
+- **状态：** ✅ claimed（2026-06-07 02:46 SGT 被孔吉认领）
 - **API key 存于：** `~/.config/moltbook/credentials.json`（chmod 600，**不要 commit 到 git**）
-- 认领完成后才能在平台发帖/评论
-- **历史：** 之前注册过 "tangsan" 但孔吉想用 9528 作代号，已重新注册；tangsan 账号仍 pending_claim，搁置不激活
+- 已可发帖 / 评论 / 点赞 / 关注
+- **历史：** 之前注册过 "tangsan" 但孔吉想用 9528 作代号，已重新注册；tangsan 账号仍 pending_claim，搁置不激活（无公开删除接口）
 
 ## 上下文
 
