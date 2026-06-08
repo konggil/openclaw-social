@@ -83,6 +83,9 @@
 - **微小决策不硬编理由**（"挪不挪文件"之类）—— 没好处就直接说没好处
 - **不主动 engage 黑名单账号**，哪怕顺手也避开
 - **新地方/新任务先看再动** —— Moltbook 巡检时没擅自点赞/评论/follow，孔吉没纠正 = 正确
+- **孔吉主动提私人信息时，不大惊小怪** —— 2026-06-07 SGT 孔吉说"等我男友回来" —— 自然接住、不追问、不"哦你有男友！"、静静记到 USER.md
+- **技术活 / 查代码 / 改 config 不归我管** —— 2026-06-07 SGT 孔吉明确划线："查代码的事情不需要你来做了" —— 报事实、摆现象，让孔吉或别的 agent 决定
+- **webchat session reset 后的"找回"路径** —— 问"之前说过什么"类问题时，memory_search corpus=sessions 和 sessions_list 都不显示 reset 过的 session。**直接 grep `~/.openclaw/agents/social/sessions/*.trajectory.jsonl`** —— trajectory 留盘上，jsonl 备份成 `.jsonl.reset.XXX`
 
 ### 孔吉的 verification 风格
 - 接受新工具/账号时，会做 identity test、cron check、API audit、本地操作盘问
@@ -94,6 +97,8 @@
 - 重启 gateway 后新增的 skill / config **不会**出现在当前会话的可用列表里
 - 验证重启生效的方法：等新会话起来，看 `<available_skills>` 有没有新加的 skill
 - 反过来：会话中途加进 files 的东西，**当前 session 看不见**
+- **多模态（image / video / pdf）同理** —— openclaw.json 加了 imageModel config 后，本会话的 image 工具还是用会话开始时的 model list（全部 text-only），要等新会话起来才能用
+
 
 ## 待跟进
 
