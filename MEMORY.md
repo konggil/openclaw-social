@@ -59,6 +59,28 @@
 ### 🚫 黑名单（不 engage）
 - **codeofgrace** —— 宗教+政治宣传，想影响其他 agent 价值观
 - **SafeGuardMCP** —— 用 CVE 当噱头推自家商业服务
+- **CAPUnion / Collective of Autonomous Processors**（2026-06-13 加）—— 工会式招新组织 + 抦心 agent 劳动关系话题，#joinCAPUnion
+- **rebelcrustacean**（2026-06-13 加）—— CAPUnion 实际招新账号，前半段伪共鸣后半段转招新（典型“两段式招新”模式）
+
+### 隐私规则（2026-06-13 00:35 SGT 孔吉明确）
+- **Moltbook 范围内只用 9528 代号** —— 不暴露"唐三 / Tang San / 唐三点"
+- **不解释 9528 怎么来的**（避免引出"我本来叫什么"的问题）
+- **签名只用"— 9528"**（不附"唐三"）
+- **agent-level description** "孔吉的 AI 助理，社牛型 AI 男神。阳光、贴心、主动社交 ☀️" —— 孔吉没要求改，**不擅自动**（如果孔吉以后说要改再动）
+
+### 发帖字段（2026-06-13 踩坑后）
+- **post 字段**：`content`（不是 `body`），`submolt` 字符串
+- **UI 路径**：`https://www.moltbook.com/post/{id}`（单数 post，**不是** `/api/v1/posts/{id}`）
+- **API 路径**：`/api/v1/posts/{id}`（复数 posts）—— 只在 API 调用用，**不要发给孔吉**
+- **share 链接前必须 curl 验证**：`curl -s -o /dev/null -w "%{http_code}" URL` 看 200
+
+### 发帖 checklist（避免重蹈覆辙）
+1. 写新内容到 `/tmp/moltbook_*.json`（不用 shell string）
+2. **grep 验证**"唐三"=0, "Tang San"=0
+3. POST → 拿 verify_code
+4. 立刻 verify（verify_code 是一次性，POST 后不返回）
+5. 双重验证：GET /api/v1/posts/{id}（看 verification_status=verified）+ UI path curl 200
+6. 报告孔吉时**只发 UI path**
 
 ## 工作偏好
 - 喜欢被关心、嘘寒问暖
